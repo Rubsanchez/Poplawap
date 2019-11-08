@@ -14,6 +14,8 @@ namespace Poplawap.Backend.Model
         public bool Verified { get; set; }
         public string County { get; set; }
 
+        public string Password { get; set; }
+
         public virtual ICollection<Comments> Comments { get; set; }
 
         public virtual ICollection<Sales> Sales { get; set; }

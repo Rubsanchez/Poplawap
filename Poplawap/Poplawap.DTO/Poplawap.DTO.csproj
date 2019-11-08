@@ -9,7 +9,6 @@
     <Folder Include="Product\" />
     <Folder Include="Sale\" />
     <Folder Include="Status\" />
-    <Folder Include="User\" />
   </ItemGroup>
 
 </Project>

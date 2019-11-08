@@ -1,8 +1,8 @@
 C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\bin\Debug\netstandard2.0\Poplawap.DTO.deps.json
 C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\bin\Debug\netstandard2.0\Poplawap.DTO.dll
 C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\bin\Debug\netstandard2.0\Poplawap.DTO.pdb
+C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\obj\Debug\netstandard2.0\Poplawap.DTO.csprojAssemblyReference.cache
 C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\obj\Debug\netstandard2.0\Poplawap.DTO.AssemblyInfoInputs.cache
 C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\obj\Debug\netstandard2.0\Poplawap.DTO.AssemblyInfo.cs
 C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\obj\Debug\netstandard2.0\Poplawap.DTO.dll
 C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\obj\Debug\netstandard2.0\Poplawap.DTO.pdb
-C:\Work\Personal\Poplawap\Poplawap\Poplawap.DTO\obj\Debug\netstandard2.0\Poplawap.DTO.csprojAssemblyReference.cache

@@ -12,14 +12,13 @@ namespace Poplawap.Backend.Infrastructure
         public static DTO.UserDTO MapUserResponse(this ApplicationUser user) =>
             new DTO.UserDTO 
             {
-                
-                //Id = user.Id,
-                //Name = user.UserName,
-                //Surname = user.,
-                //Email = user.Email,
-                //Password = user.Password,
-                //Verified = user.Verified,
-                //County = user.County
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+                Password = user.Password,
+                Verified = user.Verified,
+                County = user.County                
             };
     }
 }
