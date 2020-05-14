@@ -4,6 +4,12 @@
         <name>Poplawap.Backend</name>
     </assembly>
     <members>
+        <member name="M:Poplawap.Backend.Controllers.CategoriesController.GetMainCategories">
+            <summary>
+            Get the product categories
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Poplawap.Backend.Controllers.UsersController.#ctor(Poplawap.Backend.Model.ApplicationDbContext,Microsoft.Extensions.Options.IOptions{Poplawap.Backend.Helpers.AppSettings},Microsoft.AspNetCore.Identity.UserManager{Poplawap.Backend.Model.ApplicationUser},Microsoft.AspNetCore.Identity.SignInManager{Poplawap.Backend.Model.ApplicationUser},Microsoft.AspNetCore.Identity.UI.Services.IEmailSender,Poplawap.Backend.Helpers.ICipherService)">
             <summary>
             UsersController's constructor

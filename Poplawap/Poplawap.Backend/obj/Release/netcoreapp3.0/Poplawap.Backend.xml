@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Poplawap.Backend</name>
+    </assembly>
+    <members>
+        <member name="M:Poplawap.Backend.Controllers.CategoriesController.GetMainCategories">
+            <summary>
+            Get the product categories
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Poplawap.Backend.Controllers.UsersController.#ctor(Poplawap.Backend.Model.ApplicationDbContext,Microsoft.Extensions.Options.IOptions{Poplawap.Backend.Helpers.AppSettings},Microsoft.AspNetCore.Identity.UserManager{Poplawap.Backend.Model.ApplicationUser},Microsoft.AspNetCore.Identity.SignInManager{Poplawap.Backend.Model.ApplicationUser},Microsoft.AspNetCore.Identity.UI.Services.IEmailSender,Poplawap.Backend.Helpers.ICipherService)">
+            <summary>
+            UsersController's constructor
+            </summary>
+            <param name="db"></param>
+            <param name="appSettings"></param>
+            <param name="userManager"></param>
+            <param name="signInManager"></param>
+            <param name="emailSender"></param>
+            <param name="cipherService"></param>
+        </member>
+        <member name="M:Poplawap.Backend.Controllers.UsersController.Authenticate(Poplawap.DTO.AuthenticateUserDTO)">
+            <summary>
+            Authorize a specific user with the email and password
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Poplawap.Backend.Controllers.UsersController.Logout">
+            <summary>
+            Logout the user logged
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Poplawap.Backend.Controllers.UsersController.CreateUser(Poplawap.DTO.UserDTO)">
+            <summary>
+            Creates a user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Poplawap.Backend.Controllers.UsersController.Update(Poplawap.DTO.UpdateUserDTO)">
+            <summary>
+            Updates user information
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

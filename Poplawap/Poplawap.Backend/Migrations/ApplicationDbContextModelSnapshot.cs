@@ -241,6 +241,10 @@ namespace Poplawap.Backend.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
@@ -337,13 +341,7 @@ namespace Poplawap.Backend.Migrations
                     b.Property<DateTime>("PublishedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("SaleId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("SaleId")
-                        .IsUnique();
 
                     b.ToTable("Products");
                 });
@@ -368,6 +366,9 @@ namespace Poplawap.Backend.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductId")
+                        .IsUnique();
 
                     b.HasIndex("StatusId");
 
@@ -398,10 +399,15 @@ namespace Poplawap.Backend.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Code")
                         .IsRequired()
-                        .HasColumnType("nvarchar(20)")
-                        .HasMaxLength(20);
+                        .HasColumnType("nvarchar(3)")
+                        .HasMaxLength(3);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.HasKey("Id");
 
@@ -482,17 +488,14 @@ namespace Poplawap.Backend.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Poplawap.Backend.Model.Products", b =>
-                {
-                    b.HasOne("Poplawap.Backend.Model.Sales", "Sale")
-                        .WithOne("Product")
-                        .HasForeignKey("Poplawap.Backend.Model.Products", "SaleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Poplawap.Backend.Model.Sales", b =>
                 {
+                    b.HasOne("Poplawap.Backend.Model.Products", "Product")
+                        .WithOne("Sale")
+                        .HasForeignKey("Poplawap.Backend.Model.Sales", "ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Poplawap.Backend.Model.Statuses", "Status")
                         .WithMany("Sales")
                         .HasForeignKey("StatusId")

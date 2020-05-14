@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Poplawap.Backend.Helpers;
-using Poplawap.Backend.Infrastructure;
 using Poplawap.Backend.Model;
 using Poplawap.DTO;
 using System;
@@ -125,7 +124,7 @@ namespace Poplawap.Backend.Controllers
             string code = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-            //Utils.SendEmail(appUser.Email, code);
+            Utils.SendEmail(appUser.Email, code);
 
             var token = BuildToken(user.Email);
 

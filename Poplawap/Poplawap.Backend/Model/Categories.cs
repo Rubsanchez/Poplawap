@@ -14,6 +14,9 @@ namespace Poplawap.Backend.Model
         
         public int? ParentCategory { get; set; }
 
+        [StringLength(20)]
+        public string Icon { get; set; }
+
         public virtual ICollection<SalesCategories> Sales { get; set; }
     }
 }

@@ -9,8 +9,8 @@ namespace Poplawap.Backend.Model
         public int Id { get; set; }
 
         [Required]
-        [StringLength(20)]
-        public string Name { get; set; }
+        [StringLength(30)]
+        public string Description { get; set; }
 
         public virtual ICollection<Sales> Sales { get; set; }
     }

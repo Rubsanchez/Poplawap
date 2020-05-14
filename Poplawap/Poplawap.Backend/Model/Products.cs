@@ -24,7 +24,6 @@ namespace Poplawap.Backend.Model
 
         public DateTime? EndDate { get; set; }
 
-        public int SaleId { get; set; }
         public virtual Sales Sale { get; set; }
 
         public virtual ICollection<ProductImages> ProductImages { get; set; }

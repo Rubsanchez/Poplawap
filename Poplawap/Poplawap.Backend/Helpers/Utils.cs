@@ -33,7 +33,7 @@ namespace Poplawap.Backend.Helpers
             string text = string.Format("Please click on this link to {0}: {1}", emailAddress, link);
             string html = "Please confirm your account by clicking this link: <a href=\"" + link + "\">link</a><br/>";
 
-            html += HttpUtility.HtmlEncode(@"Or click on the copy the following link on the browser:" + link);
+            html += HttpUtility.HtmlEncode(@"Or click on the copy the following link on the browser: " + link);
             #endregion
 
             MailMessage msg = new MailMessage();

@@ -20,5 +20,27 @@ namespace Poplawap.Backend.Infrastructure
                 Verified = user.Verified,
                 County = user.County                
             };
+
+        public static DTO.CategoryDTO MapCategoryResponse(this Categories category) =>
+            new DTO.CategoryDTO
+            {
+                Id = category.Id,
+                Name = category.Name,
+                ParentCategory = category.ParentCategory,
+                Icon = category.Icon
+            };
+
+        public static DTO.SaleDTO MapSaleRespose(this Sales sale) =>
+            new DTO.SaleDTO
+            {
+                ProductName = sale.Product.ProductName,
+                Description = sale.Product.Description,
+                PublishedDate = sale.Product.PublishedDate,
+                EndDate = sale.Product.EndDate,
+                Prize = sale.Product.Prize,
+                Goal = sale.Goal,
+                Status = sale.Status.Id,
+                Images = sale.Product.ProductImages.Select(p => p.Base64).ToList()
+            };
     }
 }

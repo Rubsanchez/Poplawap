@@ -22,7 +22,7 @@ namespace Poplawap.Backend.Model
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            {
+            { 
                 optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
             }
         }
@@ -51,6 +51,10 @@ namespace Poplawap.Backend.Model
                 .WithMany(ss => ss.Sales)
                 .HasForeignKey(s => s.StatusId);
 
+                s.HasOne(s => s.Product)
+                .WithOne(p => p.Sale)
+                .HasForeignKey<Sales>(s => s.ProductId);
+
             });
 
             modelBuilder.Entity<SalesCategories>()
@@ -58,10 +62,6 @@ namespace Poplawap.Backend.Model
 
             modelBuilder.Entity<Products>(p =>
             {
-                p.HasOne(p => p.Sale)
-                .WithOne(s => s.Product)
-                .HasForeignKey<Products>(p => p.SaleId);
-
                 p.HasMany(p => p.ProductImages)
                 .WithOne(pi => pi.Product)
                 .HasForeignKey(pi => pi.ProductId);
